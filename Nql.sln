@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3AE6CA3-C106-4356-A624-C2BA82A174DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3C4C615B-3DD1-41EF-94C8-11F16D21199E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nql", "src\Nql\Nql.csproj", "{CC6DBCFB-A5E7-4072-A6FE-25B273C44FC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nql.Abstractions", "src\Nql.Abstractions\Nql.Abstractions.csproj", "{97432D5F-519F-4127-8057-3BCCE5529F69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{884B79CA-7E5B-425E-82D6-525F211ABEFB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nql.UnitTests", "test\Nql.UnitTests\Nql.UnitTests.csproj", "{4D215398-46EB-4698-A16D-01AD12EB8DBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC6DBCFB-A5E7-4072-A6FE-25B273C44FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6DBCFB-A5E7-4072-A6FE-25B273C44FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6DBCFB-A5E7-4072-A6FE-25B273C44FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6DBCFB-A5E7-4072-A6FE-25B273C44FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97432D5F-519F-4127-8057-3BCCE5529F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97432D5F-519F-4127-8057-3BCCE5529F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97432D5F-519F-4127-8057-3BCCE5529F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97432D5F-519F-4127-8057-3BCCE5529F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D215398-46EB-4698-A16D-01AD12EB8DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D215398-46EB-4698-A16D-01AD12EB8DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D215398-46EB-4698-A16D-01AD12EB8DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D215398-46EB-4698-A16D-01AD12EB8DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC6DBCFB-A5E7-4072-A6FE-25B273C44FC9} = {A3AE6CA3-C106-4356-A624-C2BA82A174DD}
+		{97432D5F-519F-4127-8057-3BCCE5529F69} = {A3AE6CA3-C106-4356-A624-C2BA82A174DD}
+		{4D215398-46EB-4698-A16D-01AD12EB8DBC} = {3C4C615B-3DD1-41EF-94C8-11F16D21199E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAF4C981-3B1B-45D6-B197-E5FBB309D6DD}
+	EndGlobalSection
+EndGlobal

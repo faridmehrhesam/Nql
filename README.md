@@ -1,0 +1,1 @@
+# NQL - .NET Query Language
