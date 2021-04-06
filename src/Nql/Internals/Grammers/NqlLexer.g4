@@ -33,17 +33,29 @@ SEPARATOR: '|';
 
 // Identifiers
 
-TAKE_IDENTIFIER: T A K E;
+SELECT_IDENTIFIER: S E L E C T;
 
 SKIP_IDENTIFIER: S K I P;
 
+TAKE_IDENTIFIER: T A K E;
+
+// KEYWORDS
+
+AS: A S;
+
 // Signs
 
-PLUS: '+';
+DOT: '.';
 
 MINUS: '-';
 
+PLUS: '+';
+
+COMMA: ',';
+
 // Constants
+
+WORD: [_a-zA-Z][_a-zA-Z0-9]*;
 
 INTEGER: [0-9]+;
 

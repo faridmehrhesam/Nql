@@ -10,7 +10,7 @@ namespace Nql.Internals.ParserVisitors
         {
             var text = context.GetText();
 
-            if (string.IsNullOrWhiteSpace(text))
+            if (!int.TryParse(text, out var value))
                 return null;
 
             var location = new NqlNodeLocation(
@@ -19,7 +19,12 @@ namespace Nql.Internals.ParserVisitors
                 context.stop.Line,
                 context.start.Column + text.Length);
 
-            return new NqlConstantNode(int.Parse(text), typeof(int), location);
+            return new NqlConstantNode(value, typeof(int), location);
+        }
+
+        public override NqlNode VisitField(NqlParser.FieldContext context)
+        {
+            return new NqlFieldNode(context.GetText(), context.ToLocation());
         }
     }
 }

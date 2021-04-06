@@ -1,21 +1,20 @@
 ﻿using System.Linq.Expressions;
 using Nql.Abstractions;
-using Nql.Abstractions.Nodes;
 
 namespace Nql.Internals.ExpressionVisitors
 {
-    internal partial class NqlExpressionVisitor : INqlNodeVisitor<Expression>
+    internal partial class NqlExpressionVisitor : NqlNodeVisitor<Expression>
     {
+        private readonly INqlTypeBuilder nqlTypeBuilder;
+
         private Expression source;
 
-        internal NqlExpressionVisitor(Expression source)
+        private ParameterExpression sourceParameter;
+
+        internal NqlExpressionVisitor(Expression source, INqlTypeBuilder nqlTypeBuilder)
         {
             this.source = source;
-        }
-
-        public Expression Visit(NqlNode node)
-        {
-            return node?.Accept(this);
+            this.nqlTypeBuilder = nqlTypeBuilder;
         }
     }
 }

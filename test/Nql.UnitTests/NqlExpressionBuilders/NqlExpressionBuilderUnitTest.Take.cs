@@ -12,7 +12,7 @@ namespace Nql.UnitTests.NqlExpressionBuilders
         public void TestVisitTake_WhenEverythingIsOk_TakeMustBeAppliedOnSource()
         {
             var source = Enumerable.Range(1, 10).Select(i => i).AsQueryable();
-            var nqlExpressionBuilder = new NqlExpressionBuilder(null);
+            var nqlExpressionBuilder = new NqlExpressionBuilder(null, new NqlTypeBuilder());
             var nqlConstantNode = new NqlConstantNode(5, typeof(int), null);
             var nqlTakeNode = new NqlTakeNode(nqlConstantNode, null);
             var expression = nqlExpressionBuilder.Build(nqlTakeNode, source.Expression);

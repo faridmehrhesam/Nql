@@ -5,7 +5,7 @@ namespace Nql.Internals.ExpressionVisitors
 {
     internal partial class NqlExpressionVisitor
     {
-        public Expression VisitMain(NqlMainNode node)
+        public override Expression VisitMain(NqlMainNode node)
         {
             foreach (var childNode in node.ChildNodes)
                 source = Visit(childNode);

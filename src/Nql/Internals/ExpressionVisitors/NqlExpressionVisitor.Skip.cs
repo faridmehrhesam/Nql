@@ -6,7 +6,7 @@ namespace Nql.Internals.ExpressionVisitors
 {
     internal partial class NqlExpressionVisitor
     {
-        public Expression VisitSkip(NqlSkipNode node)
+        public override Expression VisitSkip(NqlSkipNode node)
         {
             return Expression.Call(
                 typeof(Queryable),

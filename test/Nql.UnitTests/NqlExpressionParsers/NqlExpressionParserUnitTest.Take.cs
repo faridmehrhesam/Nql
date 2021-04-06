@@ -31,7 +31,7 @@ namespace Nql.UnitTests.NqlExpressionParsers
             var nqlMainNode = (NqlMainNode) nqlExpressionParser.Parse("| take A", diagnostics);
             var nqlTakeNode = (NqlTakeNode) nqlMainNode.ChildNodes.First();
 
-            diagnostics.Should().HaveCount(2);
+            diagnostics.Should().HaveCount(1);
             nqlMainNode.ChildNodes.Should().HaveCount(1);
             nqlTakeNode.Count.Should().BeNull();
         }

@@ -12,7 +12,7 @@ namespace Nql.UnitTests.NqlExpressionBuilders
         public void TestVisitSkip_WhenEverythingIsOk_SkipMustBeAppliedOnSource()
         {
             var source = Enumerable.Range(1, 10).Select(i => i).AsQueryable();
-            var nqlExpressionBuilder = new NqlExpressionBuilder(null);
+            var nqlExpressionBuilder = new NqlExpressionBuilder(null, new NqlTypeBuilder());
             var nqlConstantNode = new NqlConstantNode(5, typeof(int), null);
             var nqlSkipNode = new NqlSkipNode(nqlConstantNode, null);
             var expression = nqlExpressionBuilder.Build(nqlSkipNode, source.Expression);

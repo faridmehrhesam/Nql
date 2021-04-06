@@ -6,7 +6,7 @@ namespace Nql.Internals.ExpressionVisitors
 {
     internal partial class NqlExpressionVisitor
     {
-        public Expression VisitTake(NqlTakeNode node)
+        public override Expression VisitTake(NqlTakeNode node)
         {
             return Expression.Call(
                 typeof(Queryable),

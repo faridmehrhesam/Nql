@@ -8,10 +8,22 @@ compileUnit: nql EOF;
 
 nql: (SEPARATOR nqlExpression)+;
 
-nqlExpression: takeExpression # take | skipExpression # skip;
+nqlExpression:
+	selectExpression	# select
+	| skipExpression	# skip
+	| takeExpression	# take;
 
-takeExpression: TAKE_IDENTIFIER integer;
+selectExpression:
+	SELECT_IDENTIFIER selectField (COMMA selectField)*;
 
 skipExpression: SKIP_IDENTIFIER integer;
 
+takeExpression: TAKE_IDENTIFIER integer;
+
+selectField: value AS Name = WORD;
+
+value: field | integer;
+
 integer: (PLUS | MINUS)? INTEGER;
+
+field: WORD (DOT WORD)*;

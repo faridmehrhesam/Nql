@@ -12,9 +12,12 @@ namespace Nql
     {
         private readonly INqlExpressionParser nqlExpressionParser;
 
-        public NqlExpressionBuilder(INqlExpressionParser nqlExpressionParser)
+        private readonly INqlTypeBuilder typeBuilder;
+
+        public NqlExpressionBuilder(INqlExpressionParser nqlExpressionParser, INqlTypeBuilder typeBuilder)
         {
             this.nqlExpressionParser = nqlExpressionParser;
+            this.typeBuilder = typeBuilder;
         }
 
         public Expression Build(string nqlString, Expression source)
@@ -30,7 +33,7 @@ namespace Nql
 
         public Expression Build(NqlNode nqlNode, Expression source)
         {
-            return new NqlExpressionVisitor(source).Visit(nqlNode);
+            return new NqlExpressionVisitor(source, typeBuilder).Visit(nqlNode);
         }
     }
 }
